@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo img {
+    margin-top: 10px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+ul.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu li a:hover {
+    color: rgb(168, 144, 35);
+}
+
+.highlight {
+    font-size: 24px;
+}
+
+.active {
+    margin-left: auto;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    ul.menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        background-color: black;
+    }
+
+    #menu-toggle:checked+.menu-icon+ul.menu {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        width: 100%;
+    }
+
+    .active {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul.menu {
+        gap: 0;
+    }
+
+    .menu li a {
+        padding: 10px;
+    }
+
+    .logo img {
+        margin-top: 0;
+    }
+}
+
+
+
+.slider {
+    margin-top: 83px;
+    width: 100%;
+    height: 570px;
+    overflow: hidden;
+}
+
+figure {
+    position: relative;
+    left: 0;
+    width: 400%;
+    animation: 10s slide infinite;
+}
+
+.slide {
+    position: relative;
+    width: 25%;
+    float: left;
+}
+
+
+.slide img {
+    width: 100%;
+    height: 560px;
+}
+
+@keyframes slide {
+    0% {
+        left: 0;
+    }
+
+    20% {
+        left: -100%;
+    }
+
+    40% {
+        left: -200%;
+    }
+
+    60% {
+        left: -300%;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .slider {
+        max-height: 75vh;
+        margin-top: 85px;
+    }
+}
+
+
+
+
+
+
+
+
+.polaroid {
+    position: relative;
+    margin-left: 30px;
+    margin-top: 80px;
+    width: 15%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.polaroid img {
+    border-radius: 10px;
+}
+
+.postive {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+}
+
+.postive:hover {
+    opacity: 1;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.polaroid:hover .middle {
+    opacity: 1;
+}
+
+.text11 {
+    position: relative;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 10px 10px;
+}
+
+#ai {
+    margin-left: 50px;
+    float: left;
+}
+
+#aii {
+    margin-top: -10px;
+    margin-left: 50px;
+    float: left;
+}
+
+#main {
+    height: 1150px;
+}
+
+
+#main h1 {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 40px;
+}
+
+#main p {
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 20px;
+}
+
+
+#center {
+    background-color: rgba(167, 163, 163, 0.226);
+    padding-bottom: 70px;
+}
+
+#center h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 40px;
+}
+
+#center p {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.center {
+    display: inline-block;
+    height: 335px;
+    width: 260px;
+    background-color: rgba(255, 134, 172, 0.226);
+    border-radius: 15px;
+    margin-left: 80px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.center:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.center img {
+    margin-left: 55px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.center h3 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.center p {
+    font-size: 16px !important;
+}
+
+@media (max-width: 800px) {
+    #center {
+        text-align: center;
+        margin-top: 2800px;
+    }
+
+    .center {
+        text-align: center;
+        margin-top: 1000px;
+        width: 80% !important;
+        margin: 20px auto !important;
+    }
+
+    .center img {
+        margin: 20px auto;
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+#event {
+    background-color: #fff8ee;
+    text-align: center;
+    padding: 70px 0px;
+}
+
+h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+
+p {
+    color: #555;
+    padding: 20px 0px;
+    font-size: 1.2rem;
+}
+
+.carousel-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 250px;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #eadfff;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 800px) {
+    .carousel-item img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .carousel-item {
+        min-width: 80%;
+    }
+}
+
+
+
+
+#Highlights {
+    background-color: #dff3ea;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 80px;
+    margin-top: -30px;
+}
+
+#Highlights h1 {
+    text-align: center;
+    padding-top: 50px;
+    font-size: 50px;
+}
+
+#Highlights p {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 50px;
+}
+
+.testimonial-container {
+    margin-left: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #dff3ea;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.testimonial-text {
+    flex: 1 1 400px;
+    margin: 20px;
+    text-align: center;
+}
+
+.testimonial-text p {
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #f99172;
+    font-size: 20px;
+}
+
+.testimonial-image {
+    flex: 1 1 300px;
+    margin: 20px;
+}
+
+.testimonial-image img {
+    width: 110%;
+    border-radius: 10px;
+    height: 470px;
+    margin-right: 50px;
+}
+
+.arrows {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.arrow:hover {
+    background: #f0f0f0;
+}
+
+
+
+@media (max-width: 800px) {
+    .testimonial-container {
+        flex-direction: column;
+        padding: 20px;
+        margin-right: 150px;
+    }
+
+
+}
+
+
+
+
+
+
+.c8 {
+    background-color: #fff8ee;
+}
+
+.c11 {
+    text-align: center;
+    font-size: 32px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.c19 .c11 {
+    padding-top: 50px;
+}
+
+.c19 {
+    background-color: #fff8ee;
+    padding: 0px 20px 0px;
+}
+
+.c20 {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c20 .c24 {
+    max-width: 65%;
+    width: 100%;
+}
+
+.c20 .c24 .c25 {
+    margin: 20px 0;
+}
+
+.c20 .c24 .c25 label {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.c20 .c24 .c25 input {
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.c20 .c24 textarea {
+    width: 100%;
+    height: 200px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+}
+
+.c20 .c24 .button {
+    padding: 8px 28px;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #3b141c;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.4s ease;
+}
+
+.c20 .c24 .button:hover {
+    color: #3b141c;
+    background: transparent;
+    border-color: #3b141c;
+}
+
+.c26 .c27 {
+    display: flex;
+    gap: 20px;
+    margin: 80px 0;
+}
+
+.c26 .c27 i {
+    font-size: 32px;
+    margin-top: 5px;
+}
+
+@media (max-width: 800px) {
+    .c20 {
+        flex-direction: column;
+    }
+
+    .c20 .c24,
+    .c26 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .polaroid {
+        width: 90% !important;
+        margin: 20px auto !important;
+        float: none !important;
+        display: block;
+        text-align: center;
+    }
+
+    .polaroid img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .postive img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+
+
+
+#footer {
+    background-color: rgb(26, 25, 25);
+    height: auto;
+    margin-top: -10px;
+    width: 100%;
+    height: 460px;
+    position: relative;
+}
+
+#footer p {
+    background-color: rgb(26, 25, 25);
+    height: auto;
+    text-align: center;
+    float: left;
+    margin-left: 230px;
+    margin-top: 60px;
+    line-height: 40px;
+    color: rgb(218, 218, 218);
+
+}
+
+
+#img1 {
+    padding: 10px 0px;
+    width: 100%;
+    background-color: rgba(250, 249, 249, 0.5);
+    position: absolute;
+    top: 77.3%;
+}
+
+#img1 a {
+    text-decoration: none;
+    margin-left: 230px;
+}
+
+#img1 img {
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 800px) {
+    #footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    #footer p {
+        float: none;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    #img1 {
+        position: static;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    #img1 img {
+        margin: 10px 5px;
+    }
+
+    #img1 a {
+        margin: 0;
+    }
+}
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="img/1.jpg" alt="logo" height="50px" width="50px">
+        </div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul class="menu">
+            <li><a href="#" class="highlight">Home</a></li>
+            <li><a href="#events" class="active">Events</a></li>
+            <li><a href="#Highlights">About us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#center">Services</a></li>
+        </ul>
+    </nav>
+
+
+
+
+    <div class="slider">
+        <figure>
+            <div class="slide">
+                <img src="img/2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="img/501.jpg" alt="">
+            </div>
+        </figure>
+    </div>
+
+
+    <section id="events">
+        <section id="main">
+
+            <h1>Our Gallery</h1>
+            <p>Explore some of the unforgettable moments we've created for our clients.</p>
+
+            <div class="polaroid" id="ai">
+                <img src="img/7.jpeg" alt="" width="400px" height="400px">
+                <div class="postive">
+                    <img src="img/501.jpg" alt="" width="400px" height="400px">
+                    <div class="middle">
+                        <div class="text11">Quick View</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="polaroid" id="ai" style="margin-left: 220px;">
+                <img src="img/5.jpeg" alt="" width="400px" height="400px">
+                <div class="postive">
+                    <img src="img/9.jpeg" alt="" width="400px" height="400px">
+                    <div class="middle">
+                        <div class="text11">Quick View</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="polaroid" id="ai" style="margin-left: 220px;">
+                <img src="img/6.jpeg" alt="" width="400px" height="400px">
+                <div class="postive">
+                    <img src="img/3.jpg" alt="" width="400px" height="400px">
+                    <div class="middle">
+                        <div class="text11">Quick View</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="polaroid" id="aii" style="margin-left: 270px;">
+                <img src="img/images (1).jpeg" alt="" width="380px" height="430px">
+                <div class="postive">
+                    <img src="img/8.jpeg" alt="" width="380px" height="430px">
+                    <div class="middle">
+                        <div class="text11">Quick View</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="polaroid" id="aii" style="margin-left: 200px;">
+                <img src="img/10.jpg" alt="" width="380px" height="430px">
+                <div class="postive">
+                    <img src="img/11.jpg" alt="" width="380px" height="430px">
+                    <div class="middle">
+                        <div class="text11">Quick View</div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+
+
+
+
+
+    <section id="center">
+        <h1>Our Services</h1>
+        <p>We offer a wide range of event planning services to make your special day unforgettable.</p>
+        <div class="center">
+            <img src="img/services1.jpeg" alt="" height="150px" width="150px">
+            <h3>Weddings</h3>
+            <p>Plan the most important day of <br> your life with our expert wedding <br> planners.</p>
+        </div>
+
+        <div class="center" style="margin-left: 40px;">
+            <img src="img/services2.jpeg" alt="" height="150px" width="150px">
+            <h3>Corporate Events</h3>
+            <p>Organize successful corporate <br> events that leave a lasting <br> impression on your guests.</p>
+        </div>
+
+        <div class="center" style="margin-left: 40px;">
+            <img src="img/download.jpeg" alt="" height="150px" width="150px">
+            <h3>Birthdays</h3>
+            <p>Celebrate milestones with <br> unique and memorable birthday <br> parties for all ages.</p>
+        </div>
+
+        <div class="center" style="margin-left: 40px;">
+            <img src="img/services4.jpeg" alt="" height="150px" width="150px">
+            <h3>Concerts</h3>
+            <p>Bring music to life with our <br> professional concert planning <br> services.</p>
+        </div>
+    </section>
+
+
+
+    <section id="event">
+        <h1>Event Highlights</h1>
+        <p>Take a look at some of the most memorable events we've organized.</p>
+
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <div class="carousel-item"><img src="img/12.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/17.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/14.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/15.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/16.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/13.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/19.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/23.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/22.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/18.jpg" alt=""></div>
+                <div class="carousel-item"><img src="img/20.jpg" alt=""></div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="moveSlide(-1)">←</button>
+            <button onclick="moveSlide(1)">→</button>
+        </div>
+    </section>
+
+
+
+
+    <section id="Highlights">
+        <h1>About Us</h1>
+        <p>At EventHorizon, we are passionate about creating unforgettable moments. With years of experience in event
+            <br>
+            planning, our team is dedicated to turning your vision into reality. From the smallest details to the
+            grandest <br>
+            gestures, we ensure every event is a masterpiece.
+        </p>
+        <div class="testimonial-container">
+            <div class="testimonial-text">
+                <h2>Our Clients Say</h2>
+                <p id="testimonial">
+                    Planning a big event can be overwhelming, but EventHorizon made it so easy. They handled everything
+                    with
+                    precision and creativity, leaving us free to enjoy the day. Highly recommend!
+                </p>
+                <div class="testimonial-name" id="client-name">Sophia L.</div>
+                <div class="arrows">
+                    <div class="arrow" onclick="prevTestimonial()">&#8592;</div>
+                    <div class="arrow" onclick="nextTestimonial()">&#8594;</div>
+                </div>
+            </div>
+            <div class="testimonial-image">
+                <img src="img/21.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="c19" id="contact">
+        <h2 class="c11">Contact Us</h2>
+        <div class="c8">
+            <div class="c20">
+                <div class="c24">
+                    <form action="#">
+                        <div class="c25">
+                            <label for="Name">Full Name</label>
+                            <input type="text" id="Name" placeholder="Your Name" required />
+                        </div>
+                        <div class="c25">
+                            <label for="email">Your Email</label>
+                            <input type="text" id="email" placeholder="Your Email" required />
+                        </div>
+                        <div class="c25">
+                            <label for="number">Your Number</label>
+                            <input type="number" id="number" placeholder="Your Contact Number" required />
+                        </div>
+                        <div class="c25">
+                            <label for="textarea">Textarea</label>
+                            <textarea name="textarea" id="textarea" placeholder="Your Message"></textarea>
+                        </div>
+
+                        <button class="button" id="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="c26">
+                    <div class="c27">
+                        <i class="bx bx-current-location"></i>
+                        <div class="c28">
+                            <h3>Our Location</h3>
+                            <p>Berndorf, Germany</p>
+                        </div>
+                    </div>
+                    <div class="c27">
+                        <i class="bx bxs-envelope"></i>
+                        <div class="c28">
+                            <h3>General Enquries</h3>
+                            <p>Eventplanner@xyz.com</p>
+                        </div>
+                    </div>
+                    <div class="c27">
+                        <i class="bx bxs-phone-call"></i>
+                        <div class="c28">
+                            <h3>Call Us</h3>
+                            <p>+01 92728239</p>
+                        </div>
+                    </div>
+                    <div class="c27">
+                        <i class="bx bxs-time-five"></i>
+                        <div class="c28">
+                            <h3>Our Timing</h3>
+                            <p>Mon-Sun : 10:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer id="footer">
+
+        <div id="img1">
+            <a href="chat.html"><img src="img/img1.jpg" alt="" height="80px" width="80px"></a>
+            <img src="img/img2.jpg" alt="" height="80px" width="80px">
+            <img src="img/img3.jpg" alt="" height="80px" width="80px">
+            <img src="img/img4.jpg" alt="" height="80px" width="80px">
+            <img src="img/img5.jpg" alt="" height="80px" width="80px">
+            <img src="img/img6.jpg" alt="" height="80px" width="80px">
+        </div>
+        <p>Email: eventhorizon@gmail.com <br>
+            Phone: +91 73639 28282<br>
+            Equinox Business Park, Ambedkar Nagar, Kurla West, Kurla, Mumbai, Maharashtra 400070, India<br>
+            Privacy Policy Terms conditions<br>
+            © 2025 Event Planning Agency. All rights reserved.<br></p>
+
+    </footer>
+
+
+    <script>
+        const track = document.getElementById('carouselTrack');
+const itemWidth = 300;
+let position = 0;
+
+function moveSlide(direction) {
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    position += direction * itemWidth;
+
+    if (position < 0) position = 0;
+    if (position > maxScroll) position = maxScroll;
+
+    track.style.transform = `translateX(-${position}px)`;
+}
+
+
+
+
+const testimonials = [
+    {
+        text: "Planning a big event can be overwhelming, but EventHorizon made it so easy. They handled everything with precision and creativity, leaving us free to enjoy the day. Highly recommend!",
+        name: "Sophia L."
+    },
+    {
+        text: "Thanks to EventHorizon, our corporate event went off without a hitch. Their attention to detail and professional staff made all the difference!",
+        name: "Michael B."
+    },
+    {
+        text: "The decorations were stunning and the schedule was perfectly managed. Everyone is still talking about how great everything looked!",
+        name: "Emily R."
+    }
+];
+
+let currentIndex = 0;
+
+function updateTestimonial(index) {
+    document.getElementById("testimonial").textContent = testimonials[index].text;
+    document.getElementById("client-name").textContent = testimonials[index].name;
+}
+
+function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(currentIndex);
+}
+
+function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % testimonials.length;
+    updateTestimonial(currentIndex);
+}
+    </script>
+</body>
+
+</html>
